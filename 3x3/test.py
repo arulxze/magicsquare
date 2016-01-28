@@ -29,7 +29,55 @@ for side in sum_to_n(sidesum, 3):
                                             # The highest element may not be n
                                             # FLAG: check if x is equal to any
                                             # element in nums
+                                            
+            side.sort()                     # PROB: sort the list
             tot.append(side)
             
-            
 print tot                                   # FLAG: temp
+
+# FLAG: dependent
+# IMPR: use dynamic programming
+
+for x in xrange (0, len(tot)):
+    for y in xrange(0, len(tot)):
+        temp = tot[x] + tot[y]
+        if len(temp) == len(set(temp)):
+            continue
+        for z in xrange(0, len(tot)):
+            temp += tot[z]
+            print tot
+            
+            
+# 0 1 2
+# 3 4 5
+# 6 7 8
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
